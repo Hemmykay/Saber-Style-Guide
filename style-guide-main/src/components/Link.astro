@@ -1,0 +1,5 @@
+---
+import { ChevronRight } from "lucide-astro";
+const { styles, disabled } = Astro.props;
+---
+<a href="" class=`${styles} flex max-w-[118px] justify-between ${disabled==="true" && " text-neutral-300"}`>Link Button <ChevronRight /></a>

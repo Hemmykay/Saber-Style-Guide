@@ -1,0 +1,139 @@
+---
+import Checkboxs from "../components/Checkboxs";
+import Header from "../components/Header.astro";
+import Link from "../components/Link.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+<Layout title="checkbox-style-guide">
+    <div
+        class="relative w-full overflow-hidden flex flex-col items-start justify-start text-left text-[0.875rem] text-neutral-500 font-subheading-2x-small"
+    >
+        <Header />
+        <div class="w-[123.75rem] bg-foundation-grey-weak flex flex-row items-center justify-start py-[0.75rem] px-[6.25rem] box-border text-[1rem] mb-5">
+            <div class="flex-1 relative tracking-[0.06em] leading-[1.5rem] uppercase font-medium">
+              Component
+            </div>
+        </div>
+        <div class="flex flex-col gap-6 py-[0.75rem] px-[6.25rem] box-border text-[1rem]">
+          <h1 class="text-black text-[54px] font-bold">Checkboxs</h1>
+          <div class="flex gap-10 mb-5">
+            <Checkboxs active={true} type={"none"} color={"border-neutral-200 "}/>
+            <Checkboxs active={true} type={"check"} color={"bg-[#3D42CE]"}/>
+            <Checkboxs active={true} type={"minus"} color={"bg-[#3D42CE]"}/>
+          </div>
+          <div class="flex gap-10 mb-5">
+            <Checkboxs active={true} type={"none"} color={"border-neutral-300 "}/>
+            <Checkboxs active={true} type={"check"} color={"bg-foundation-blue-b500"}/>
+            <Checkboxs active={true} type={"minus"} color={"bg-foundation-blue-b500"}/>
+          </div>
+          <div class="flex gap-10 mb-5">
+            <Checkboxs active={true} type={"none"} color={"border-[#3D42CE]"}/>
+            <Checkboxs active={true} type={"check"} color={"bg-foundation-blue-b500"}/>
+            <Checkboxs active={true} type={"minus"} color={"bg-foundation-blue-b500"}/>
+          </div>
+          <div class="flex gap-10 mb-5">
+            <Checkboxs active={true} type={"none"} color={"bg-neutral-300"}/>
+            <Checkboxs active={true} type={"check"} color={"bg-neutral-300"}/>
+            <Checkboxs active={true} type={"minus"} color={"bg-neutral-300"}/>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 py-[0.75rem] px-[6.25rem] box-border text-[1rem]">
+            <h1 class="text-black text-[54px] font-bold">Checkboxs</h1>
+            <div class="flex gap-10 mb-5">
+                <div class="flex items-center gap-5">
+                    <Checkboxs active={true} type={"none"} color={"border-neutral-200 "}/>
+                    <div class="flex items-center w-[300px] gap-5">
+                        <p>Label (Sublabel)</p>
+                        <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                    </div>  
+                </div>
+                <div class="flex flex-row-reverse items-center gap-5">
+                    <Checkboxs active={true} type={"none"} color={"border-neutral-200 "}/>
+                    <div class="flex items-center w-[300px] gap-5">
+                        <p>Label (Sublabel)</p>
+                        <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                    </div>  
+                </div>
+            </div>
+            <div class="flex gap-10 mb-5">
+                <div class="flex items-center gap-5">
+                    <Checkboxs active={true} type={"check"} color={"bg-[#3D42CE]"}/>
+                    <div class="flex items-center w-[300px] gap-5">
+                        <p>Label (Sublabel)</p>
+                        <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                    </div>  
+                </div>
+                <div class="flex flex-row-reverse items-center gap-5">
+                    <Checkboxs active={true} type={"check"} color={"bg-[#3D42CE] "}/>
+                    <div class="flex items-center w-[300px] gap-5">
+                        <p>Label (Sublabel)</p>
+                        <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                    </div>  
+                </div>
+            </div>
+            <div class="flex gap-10 mb-5">
+                <div class="flex flex-row items-center gap-5">
+                    <Checkboxs active={true} type={"check"} color={"border-neutral-200 self-start"}/>
+                    <div class="flex flex-col justify-center w-[300px]">
+                        <div class="flex items-center w-[300px] gap-5">
+                            <p>Label (Sublabel)</p>
+                            <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                        </div>
+                        <div class="grid gap-3">
+                            <p>Insert the checkbox description here.</p>
+                            <a href="" class="text-[#3D42CE]">Link Button</a>
+                        </div>
+                        
+                    </div>  
+                </div>
+                <div class="flex flex-row-reverse items-center gap-5">
+                    <Checkboxs active={true} type={"check"} color={"border-neutral-200 self-start "}/>
+                    <div class="flex flex-col justify-center w-[300px]">
+                        <div class="flex items-center w-[300px] gap-5">
+                            <p>Label (Sublabel)</p>
+                            <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                        </div>
+                        <div class="grid gap-3">
+                            <p>Insert the checkbox description here.</p>
+                            <a href="" class="text-[#3D42CE]">Link Button</a>
+                        </div>
+                        
+                    </div>  
+                </div>
+            </div>
+            <div class="flex gap-10 mb-5">
+                <div class="flex flex-row items-center gap-5">
+                    <Checkboxs active={true} type={"check"} color={"bg-[#3D42CE] self-start"}/>
+                    <div class="flex flex-col justify-center w-[300px]">
+                        <div class="flex items-center w-[300px] gap-5">
+                            <p>Label (Sublabel)</p>
+                            <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                        </div>
+                        <div class="grid gap-3">
+                            <p>Insert the checkbox description here.</p>
+                            <a href="" class="text-[#3D42CE]">Link Button</a>
+                        </div>
+                        
+                    </div>  
+                </div>
+                <div class="flex flex-row-reverse items-center gap-5">
+                    <Checkboxs active={true} type={"check"} color={"bg-[#3D42CE] self-start "}/>
+                    <div class="flex flex-col justify-center w-[300px]">
+                        <div class="flex items-center w-[300px] gap-5">
+                            <p>Label (Sublabel)</p>
+                            <img src="/new.svg" alt="" srcset="" class="w-10 h-10">
+                        </div>
+                        <div class="grid gap-3">
+                            <p>Insert the checkbox description here.</p>
+                            <a href="" class="text-[#3D42CE]">Link Button</a>
+                        </div>
+                        
+                    </div>  
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</Layout>

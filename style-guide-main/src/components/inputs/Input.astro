@@ -1,0 +1,17 @@
+---
+const { label, class: customClass = "", value = '', onChange, type = "text", placeholder = "", errorMessage = "", error = false, width = "" } = Astro.props;
+---
+
+<div class={`mb-4 flex  w-72 flex-col ${customClass}`}>
+  {label && <label class="block mb-1.5 text-sm font-normal text-neutral-400">{label}</label>}
+  <input
+    type={type}
+    style={{ width }}
+    placeholder={placeholder}
+    class={`p-3 rounded-md border shadow-xs focus:outline-none 
+      ${error ? 'border-foundation-red-r300 focus:border-foundation-red-r300' : 'border-neutral-300 focus:border-foundation-blue-b300'}`}
+    value={value}
+    onInput={onChange}
+  />
+  {error && <p class="text-foundation-red-r300 text-sm mt-2">{errorMessage}</p>}
+</div>

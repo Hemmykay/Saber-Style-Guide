@@ -1,0 +1,100 @@
+---
+import Header from "../components/Header.astro";
+import { labelDisplay, paraDisplay, subheadingDisplay, titleDisplay } from "../components/typography/data";
+import TextCard from "../components/typography/TextCard.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+<Layout title="Typography-style-guide">
+    <div
+        class="relative w-full overflow-hidden flex flex-col items-start justify-start text-left text-[0.875rem] text-neutral-500 font-subheading-2x-small"
+    >
+        <Header />
+        <div
+        class=" bg-foundation-grey-weak flex flex-row items-center justify-start py-[0.75rem] px-[6.25rem] box-border text-[1rem]"
+        >
+        <div
+            class="flex-1 relative tracking-[0.06em] leading-[1.5rem] uppercase font-medium"
+        >
+            inter for Titles
+        </div>
+        </div>
+        <div
+        class="bg-neutral-0 border-stroke-soft-200 border-b-[1px] border-solid box-border flex flex-col items-start justify-start py-[3.5rem] px-[6.25rem] gap-[2rem] text-[3.5rem]"
+        >
+        <div
+            class="relative tracking-[-0.01em] leading-[4rem] font-semibold text-neutral-900 text-center"
+        >
+            Typography
+        </div>
+        <div
+            class=" relative text-[1.5rem] tracking-[-0.02em] leading-[150%] font-source-serif-pro inline-block"
+        >
+            <p class="m-0">
+            This typeface was selected due to its balance, readability, clarity
+            and moderability.
+            </p>
+            <p class="m-0">
+            It evokes a sense of professionalism, trust, and reliability.
+            </p>
+        </div>
+            {
+                titleDisplay.map((item) => (
+                    <div class="w-auto">
+                        <TextCard title={item.type} style={item.textclass} line={item.lineHeight} space={item.letterSpacing} font={item.weight} />
+                    </div>
+                ))
+            }
+        </div>
+        
+        
+        <div
+        class=" bg-foundation-grey-weak flex flex-row items-center justify-start py-[0.75rem] px-[6.25rem] box-border text-[1rem]"
+        >
+        <div
+            class="flex-1 relative tracking-[0.06em] leading-[1.5rem] uppercase font-medium"
+        >
+            SOURCE SERIF PRO for labels
+        </div>
+        </div>
+            {
+                labelDisplay.map((item) => (
+                    <div class="bg-neutral-0 border-stroke-soft-200 border-b-[1px] border-solid box-border flex flex-col items-start justify-start py-[3.5rem] px-[6.25rem] gap-[2rem]">
+                        <TextCard title={item.type} style={item.textclass} line={item.lineHeight} space={item.letterSpacing} font={item.weight} />
+                    </div>  
+                ))
+            }
+        <div
+        class="w-[123.75rem] bg-foundation-grey-weak flex flex-row items-center justify-start py-[0.75rem] px-[6.25rem] box-border text-[1rem]"
+        >
+        <div
+            class="flex-1 relative tracking-[0.06em] leading-[1.5rem] uppercase"
+        >
+            SOURCE SERIF PRO for PARAGRAPHs
+        </div>
+        </div>
+            {
+                paraDisplay.map((item) => (
+                    <div class="w-auto max-w-[123.75rem] bg-neutral-0 border-stroke-soft-200 border-b-[1px] border-solid box-border flex flex-col items-start justify-start py-[3.5rem] px-[6.25rem] gap-[2rem]">
+                        <TextCard title={item.type} style={item.textclass} line={item.lineHeight} space={item.letterSpacing} font={item.weight} />
+                    </div>  
+                ))
+            }
+        <div
+        class="w-[123.75rem] bg-foundation-grey-weak flex flex-row items-center justify-start py-[0.75rem] px-[6.25rem] box-border text-[1rem]"
+        >
+        <div
+            class="flex-1 relative tracking-[0.06em] leading-[1.5rem] uppercase font-medium"
+        >
+            SOURCE SERIF PRO for SUBHEADINGs
+        </div>
+        </div>
+        {
+            subheadingDisplay.map((item) => (
+                <div class="w-[123.75rem] bg-neutral-0 border-stroke-soft-200 border-b-[1px] border-solid box-border flex flex-col items-start justify-start py-[3.5rem] px-[6.25rem] gap-[2rem]">
+                    <TextCard title={item.type} style={item.textclass} line={item.lineHeight} space={item.letterSpacing} font={item.weight} />
+                </div>  
+            ))
+        }
+    </div>
+</Layout>

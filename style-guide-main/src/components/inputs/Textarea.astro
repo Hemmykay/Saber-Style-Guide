@@ -1,0 +1,14 @@
+---
+const { label, placeholder = "", class: customClass = "", value = '', onChange } = Astro.props;
+---
+
+<div class={`mb-4 flex  w-72 flex-col ${customClass}`}>
+  {label && <label class="block mb-1.5 text-sm font-normal text-neutral-400">{label}</label>}
+  <textarea
+    placeholder={placeholder}
+    class={`p-3 rounded-md border w-full h-[144px] shadow-xs focus:outline-none resize-none
+      border-neutral-300 focus:border-foundation-blue-b300 ${customClass}`}
+    value={value}
+    onInput={onChange}
+  ></textarea>
+</div>

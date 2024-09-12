@@ -1,0 +1,37 @@
+---
+const { title, style, line, space, font } = Astro.props;
+---
+<div class=" border-stroke-soft-200 border-b-[1px] pb-8">
+    <div class="self-stretch relative text-[0.875rem] tracking-[0.06em] leading-[1.25rem] uppercase font-source-serif-pro mb-3">
+        {title}
+    </div>
+    <div class={style} style="width: auto;"> 
+        The quick brown fox jumps over the lazy dog.
+    </div>
+    <div class="self-stretch flex flex-row items-start justify-start gap-[0.75rem] text-center text-[0.75rem] mt-3">
+        <div class="shadow-[0px_1px_2px_rgba(228,_229,_231,_0.24)] rounded-lg bg-neutral-0 border-stroke-soft-200 border-[1px] border-solid overflow-hidden flex flex-row items-center justify-start py-[0.5rem] px-[0.75rem] gap-[0.25rem]">
+            <div class="relative tracking-[0.04em] leading-[1rem] uppercase font-semibold">
+                Weight:
+            </div>
+            <div class="relative tracking-[0.04em] leading-[1rem] uppercase font-semibold text-neutral-900">
+                {font}
+            </div>
+        </div>
+        <div class="shadow-[0px_1px_2px_rgba(228,_229,_231,_0.24)] rounded-lg bg-neutral-0 border-stroke-soft-200 border-[1px] border-solid overflow-hidden flex flex-row items-center justify-start py-[0.5rem] px-[0.75rem] gap-[0.25rem]">
+            <div class="relative tracking-[0.04em] leading-[1rem] uppercase font-semibold">
+                Line Height:
+            </div>
+            <div class="relative tracking-[0.04em] leading-[1rem] uppercase font-semibold text-neutral-900">
+                {line}
+            </div>
+            </div>
+            <div class="shadow-[0px_1px_2px_rgba(228,_229,_231,_0.24)] rounded-lg bg-neutral-0 border-stroke-soft-200 border-[1px] border-solid overflow-hidden flex flex-row items-center justify-start py-[0.5rem] px-[0.75rem] gap-[0.25rem]">
+            <div class="relative tracking-[0.04em] leading-[1rem] uppercase font-semibold">
+                Letter Spacing:
+            </div>
+            <div class="relative tracking-[0.04em] leading-[1rem] uppercase font-semibold text-neutral-900">
+                {space}
+            </div>
+        </div>
+    </div>
+</div>

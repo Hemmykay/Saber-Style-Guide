@@ -1,0 +1,47 @@
+---
+const { label, class: customClass = "", onChange,  errorMessage = "", error = false } = Astro.props;
+
+const handleFileChange = (event) => {
+  const fileInput = event.target;
+  const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'Select';
+  
+  // Update the placeholder text
+  const fileNameSpan = document.getElementById('fileName');
+  if (fileNameSpan) {
+    fileNameSpan.textContent = fileName;
+  }
+
+  // Trigger the parent component's onChange
+  if (onChange) {
+    onChange(event);
+  }
+};
+---
+
+<div class={`relative mb-4 flex w-72 flex-col ${customClass}`}>
+  {label && <label class="block mb-2 text-sm font-medium text-neutral-400">{label}</label>}
+  <div class="relative">
+    <input
+      type="file"
+      class="hidden"
+      id="fileInput"
+      onChange={handleFileChange}
+    />
+    
+    <label for="fileInput" class={`block w-full py-3 px-4 rounded-md border shadow-xs focus:outline-none text-neutral-400
+            ${error ? 'border-foundation-red-r300 focus:border-foundation-red-r300' : 'border-neutral-300 focus:border-foundation-blue-b300'}`}>
+      <div class="flex justify-between items-center">
+        <span id="fileName" class="text-gray-500">Upload File</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g opacity="0.4">
+            <path d="M9 17V11L7 13" stroke="#868C98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 11L11 13" stroke="#868C98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="#868C98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="#868C98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </label>
+  </div>
+  {error && <p class="text-foundation-red-r300 text-sm mt-2">{errorMessage}</p>}
+</div>

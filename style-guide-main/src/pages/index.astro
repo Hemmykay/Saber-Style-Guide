@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ChevronLeft } from 'lucide-astro';
+const links = [
+  { name: "Colors", href: "/colors" },
+  { name: "Typography", href: "/typography" },
+  { name: "Grid and spacing", href: "/grid" },
+  { name: "Buttons", href: "/buttons" },
+  { name: "Icons", href: "/icons" },
+  { name: "Inputs", href: "/inputs" },
+  { name: "Checkboxes", href: "/checkbox" }
+];
+---
+
+<Layout title="Welcome to Astro.">
+<div class="flex w-full h-svh justify-center items-center">
+<ul class="space-y-4 p-4  bg-white shadow-md rounded-lg">
+  {links.map((link) => (
+    <li>
+      <a 
+        href={link.href} 
+        class="block text-lg text-blue-600 hover:text-blue-800 hover:bg-blue-50 p-2 rounded transition duration-200 ease-in-out"
+      >
+        {link.name}
+      </a>
+    </li>
+  ))}
+</ul>
+</div>
+
+</Layout>

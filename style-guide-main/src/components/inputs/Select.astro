@@ -1,0 +1,27 @@
+---
+const { label, options = [], class: customClass = "", errorMessage = "", error = false, width = "" } = Astro.props;
+let isOpen = false;
+
+const toggleOpen = () => {
+  isOpen = !isOpen;
+};
+---
+
+<div class={`relative mb-4  w-72 flex flex-col ${customClass}`}>
+  {label && <label class="block mb-1.5 text-sm font-medium text-neutral-400">{label}</label>}
+  <div class="relative">
+    <select
+      class={`form-select block w-full py-3.5 px-4 rounded-md border shadow-xs focus:outline-none text-neutral-400
+        ${error ? 'border-foundation-red-r300 focus:border-foundation-red-r300' : 'border-neutral-300 focus:border-foundation-blue-b300'}
+        ${isOpen ? 'border-blue-500' : ''}`}
+      style={{ width }}
+      on:click={toggleOpen}
+      on:blur={() => { isOpen = false; }}
+    >
+      {options.map(option => (
+        <option value={option.value}>{option.label}</option>
+      ))}
+    </select>
+  </div>
+  {error && <p class="text-foundation-red-r300 text-sm mt-2">{errorMessage}</p>}
+</div>

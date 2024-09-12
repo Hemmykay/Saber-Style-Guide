@@ -1,0 +1,149 @@
+---
+import Blue from "../components/colors/Blue.astro";
+import DarkerBlue from "../components/colors/DarkerBlue.astro";
+import Green from "../components/colors/Green.astro";
+import Neutral from "../components/colors/Neutral.astro";
+import Orange from "../components/colors/Orange.astro";
+import Red from "../components/colors/Red.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+<Layout title="colors-style-guide">
+    <div
+      class="w-full relative overflow-hidden flex flex-col items-start justify-start text-left text-[2rem] text-neutral-900 font-paragraph-small"
+    >
+      <Header />
+      <div
+        class="self-stretch bg-foundation-grey-weak flex flex-row items-center justify-start py-[0.75rem] px-[6.25rem] text-[1rem] text-text-sub-500"
+      >
+        <div
+          class="flex-1 relative tracking-[0.06em] leading-[1.5rem] uppercase font-semibold"
+        >
+          NEUTRALS
+        </div>
+      </div>
+      <div
+        class="self-stretch bg-bg-white-0 flex flex-col items-start justify-start py-[4.5rem] px-[6.25rem] gap-[3rem] text-[3.5rem]"
+      >
+        <div
+          class="relative font-semibold text-center"
+        >
+          Color Palette
+        </div>
+        <div
+          class="self-stretch flex flex-col items-start justify-start gap-[0.5rem] text-[2rem]"
+        >
+          <div class="self-stretch relative leading-[2.5rem] font-semibold">
+            Neutral Colors
+          </div>
+          <div
+            class="self-stretch relative text-[1.125rem] tracking-[-0.01em] leading-[1.5rem] text-text-sub-500"
+          >
+            Foundational for palettes, our Neutral Colors span from black to
+            white, offering essential versatility.
+          </div>
+        </div>
+        <Neutral />
+      </div>
+      <div
+        class="self-stretch bg-foundation-grey-weak flex flex-row items-center justify-start py-[0.75rem] px-[6.25rem] text-[1rem] text-text-sub-500"
+      >
+        <div
+          class="flex-1 relative tracking-[0.06em] leading-[1.5rem] uppercase font-semibold"
+        >
+          VIBRANTS
+        </div>
+      </div>
+      <div
+        class="self-stretch bg-bg-white-0 border-stroke-soft-200 border-b-[1px] border-solid flex flex-col items-start justify-start py-[4.5rem] px-[6.25rem] gap-[3.5rem]"
+      >
+        <div
+          class="self-stretch flex flex-col items-start justify-start gap-[0.5rem]"
+        >
+          <div class="self-stretch relative leading-[2.5rem] font-semibold">
+            Blue
+          </div>
+          <div
+            class="self-stretch relative text-[1.125rem] tracking-[-0.01em] leading-[1.5rem] text-text-sub-500"
+          >
+            The spectrum of blue brings dynamic energy to your designs with its
+            seven distinct shades.
+          </div>
+        </div>
+        <Blue />
+      </div>
+      <div
+        class="self-stretch bg-bg-white-0 border-stroke-soft-200 border-b-[1px] border-solid flex flex-col items-start justify-start py-[4.5rem] px-[6.25rem] gap-[3.5rem]"
+      >
+        <div
+          class="self-stretch flex flex-col items-start justify-start gap-[0.5rem]"
+        >
+          <div class="self-stretch relative leading-[2.5rem] font-semibold">
+            Orange
+          </div>
+          <div
+            class="self-stretch relative text-[1.125rem] tracking-[-0.01em] leading-[1.5rem] text-text-sub-500"
+          >
+            The spectrum of yellow brings brightness and cheer to your designs
+            with its seven distinct shades.
+          </div>
+        </div>
+        <Orange />
+      </div>
+      <div
+        class="self-stretch bg-bg-white-0 border-stroke-soft-200 border-b-[1px] border-solid flex flex-col items-start justify-start py-[4.5rem] px-[6.25rem] gap-[3.5rem]"
+      >
+        <div
+          class="self-stretch flex flex-col items-start justify-start gap-[0.5rem]"
+        >
+          <div class="self-stretch relative leading-[2.5rem] font-semibold">
+            Red
+          </div>
+          <div
+            class="self-stretch relative text-[1.125rem] tracking-[-0.01em] leading-[1.5rem] text-text-sub-500"
+          >
+            The spectrum of red infuses passion and intensity into your designs
+            with its seven distinct shades.
+          </div>
+        </div>
+        <Red />
+      </div>
+      <div
+        class="self-stretch bg-bg-white-0 border-stroke-soft-200 border-b-[1px] border-solid flex flex-col items-start justify-start py-[4.5rem] px-[6.25rem] gap-[3.5rem]"
+      >
+        <div
+          class="self-stretch flex flex-col items-start justify-start gap-[0.5rem]"
+        >
+          <div class="self-stretch relative leading-[2.5rem] font-semibold">
+            Green
+          </div>
+          <div
+            class="self-stretch relative text-[1.125rem] tracking-[-0.01em] leading-[1.5rem] text-text-sub-500"
+          >
+            The spectrum of green evokes nature and freshness in your designs
+            with its seven distinct shades.
+          </div>
+        </div>
+        <Green />
+      </div>
+      <div
+        class="self-stretch bg-bg-white-0 flex flex-col items-start justify-start py-[4.5rem] px-[6.25rem] gap-[3.5rem]"
+      >
+        <div
+          class="self-stretch flex flex-col items-start justify-start gap-[0.5rem]"
+        >
+          <div class="self-stretch relative leading-[2.5rem] font-semibold">
+            Darkest Blue
+          </div>
+          <div
+            class="self-stretch relative text-[1.125rem] tracking-[-0.01em] leading-[1.5rem] text-text-sub-500"
+          >
+            The spectrum of Darkest Blue imbues a sense of balance and
+            sophistication into your designs with its seven distinct shades.
+          </div>
+        </div>
+        <DarkerBlue />
+      </div>
+    </div>
+</Layout>
